@@ -5,7 +5,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 
 import { Container, LoginContainer, Column, Spacing, Title } from "./styles";
-import { defaultValues, IFormLogin } from "./types";
+import { defaultValues, IFormLogin, IFormLoginType } from "./types";
 
 const schema = yup
   .object({
@@ -27,7 +27,7 @@ const Login = () => {
     defaultValues,
     reValidateMode: "onChange",
   });
-
+  console.log(isValid);
   return (
     <Container>
       <LoginContainer>
@@ -49,7 +49,7 @@ const Login = () => {
             errorMessage={errors?.password?.message}
           />
           <Spacing />
-          <Button title="Entrar" />
+          <Button title="Entrar" disabled={!isValid} />
         </Column>
       </LoginContainer>
     </Container>
