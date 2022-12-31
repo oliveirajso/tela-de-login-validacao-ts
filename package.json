@@ -27,6 +27,7 @@
     "dev": "react-scripts start & json-server --watch db.json -p 8000",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "lint": "eslint .",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -49,6 +50,8 @@
   },
   "devDependencies": {
     "@types/styled-components": "^5.1.26",
+    "eslint": "^8.31.0",
+    "eslint-plugin-react": "^7.31.11",
     "json-server": "^0.17.1"
   }
 }
